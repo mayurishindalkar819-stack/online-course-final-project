@@ -37,18 +37,10 @@ class ChoiceAdmin(admin.ModelAdmin):
 
 @admin.register(Submission)
 class SubmissionAdmin(admin.ModelAdmin):
-    list_display = ("student_name", "course", "score", "total_marks", "submitted_at")
-from django.contrib import admin
-from .models import Course, Lesson, Question, Choice, Submission
-
-
-class ChoiceInline(admin.TabularInline):
-    model = Choice
-    extra = 2
-
-
-class QuestionInline(admin.StackedInline):
-    model = Question
-    extra = 1
-
-
+    list_display = (
+        "student_name",
+        "course",
+        "score",
+        "total_marks",
+        "submitted_at",
+    )
