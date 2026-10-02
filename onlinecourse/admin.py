@@ -37,10 +37,4 @@ class ChoiceAdmin(admin.ModelAdmin):
 
 @admin.register(Submission)
 class SubmissionAdmin(admin.ModelAdmin):
-    list_display = (
-        "student_name",
-        "course",
-        "score",
-        "total_marks",
-        "submitted_at",
-    )
+    list_display = ("student_name", "course", "score", "total_marks", "submitted_at")
