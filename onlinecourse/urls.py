@@ -8,13 +8,11 @@ urlpatterns = [
         views.course_details,
         name="course_details"
     ),
-
     path(
         "course/<int:course_id>/exam/",
         views.submit,
         name="submit"
     ),
-
     path(
         "exam/result/<int:submission_id>/",
         views.show_exam_result,
